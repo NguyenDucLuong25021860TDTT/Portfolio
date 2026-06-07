@@ -12,26 +12,26 @@
         /* ================= BIẾN CSS DÀNH CHO THEME ================= */
         :root {
             /* Light Mode (Mặc định) */
-            --bg-color: #ffffff; /* Đổi thành màu trắng cho toàn bộ các phần còn lại */
-            --bg-secondary: #ffffff; /* Đổi thành màu trắng cho phần tổng kết và footer */
-            --hero-bg: #fdf5f5; /* Giữ lại màu đỏ hồng nhạt đặc trưng cho riêng phần trang chủ */
+            --bg-color: #ffffff; 
+            --bg-secondary: #ffffff; 
+            --hero-bg: #fdf5f5; 
             --text-main: #1f2937;
             --text-muted: #4b5563;
-            --primary-color: #ef4444; /* Đỏ sáng yêu cầu */
+            --primary-color: #ef4444; 
             --primary-hover: #dc2626;
             --border-color: #e5e7eb;
             --card-bg: #ffffff;
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --logo-color: #000000; /* Màu đen cho logo ở Light Mode */
+            --logo-color: #D4AF37; /* Màu vàng đồng cho logo ở Light Mode */
         }
 
         [data-theme="dark"] {
             /* Dark Mode */
             --bg-color: #111827;
             --bg-secondary: #1f2937;
-            --hero-bg: #111827; /* Giữ màu nền tối cho trang chủ ở chế độ Dark Mode */
+            --hero-bg: #111827; 
             --text-main: #f9fafb;
             --text-muted: #9ca3af;
             --primary-color: #ef4444; 
@@ -41,7 +41,7 @@
             --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.5);
             --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.5);
             --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
-            --logo-color: #ffffff; /* Màu trắng cho logo ở Dark Mode */
+            --logo-color: #D4AF37; /* Giữ màu vàng đồng cho logo ở Dark Mode */
         }
 
         /* ================= CƠ BẢN ================= */
@@ -83,7 +83,7 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-.section-title {
+        .section-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
@@ -172,7 +172,7 @@
             font-family: 'Times New Roman', Times, serif;
             font-size: 1.5rem;
             font-weight: 800;
-            color: var(--logo-color); /* Sử dụng biến màu động */
+            color: var(--logo-color); /* Sử dụng biến màu động đã chỉnh thành vàng đồng */
             transition: color 0.3s ease;
         }
 
@@ -194,7 +194,7 @@
 
         .theme-toggle {
             background: none;
-border: none;
+            border: none;
             font-size: 1.2rem;
             color: var(--text-main);
             cursor: pointer;
@@ -220,7 +220,7 @@ border: none;
             height: 100vh;
             display: flex;
             align-items: center;
-            background-color: var(--hero-bg); /* Áp dụng biến màu nền riêng cho trang chủ */
+            background-color: var(--hero-bg); 
             position: relative;
             overflow: hidden;
         }
@@ -308,7 +308,7 @@ border: none;
         .about {
             background-color: var(--bg-color); 
         }
-.about-content-wrapper {
+        .about-content-wrapper {
             max-width: 800px; 
             margin: 0 auto;
             text-align: center; 
@@ -420,7 +420,7 @@ border: none;
             left: 0;
             width: 100%;
             height: 100%;
-background: rgba(30, 58, 138, 0.4); 
+            background: rgba(30, 58, 138, 0.4); 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -528,35 +528,22 @@ background: rgba(30, 58, 138, 0.4);
             position: relative;
             overflow: hidden;
             transition: transform 0.3s ease;
-}
+        }
 
-        .card-orange-right {
-            border: 1px solid var(--border-color);
-            border-right: 6px solid #f97316;
+        /* Lớp CSS cho viền full Cam (Phần 1) */
+        .card-orange-full {
+            border: 2px solid #f97316;
             border-radius: 20px;
         }
 
-        .card-blue-left {
-            border: 1px solid var(--border-color);
-            border-left: 6px solid #1e3a8a;
+        /* Lớp CSS cho viền full Xanh (Phần 2) */
+        .card-blue-full {
+            border: 2px solid #1e3a8a;
             border-radius: 20px;
         }
 
-        [data-theme="dark"] .card-blue-left {
-            border-left-color: #60a5fa;
-        }
-
-        .card-dual-border {
-            border-top: 4px solid #1e3a8a;
-            border-left: 4px solid #1e3a8a;
-            border-right: 4px solid #f97316;
-            border-bottom: 4px solid #f97316;
-            border-radius: 20px;
-        }
-
-        [data-theme="dark"] .card-dual-border {
-            border-top-color: #60a5fa;
-            border-left-color: #60a5fa;
+        [data-theme="dark"] .card-blue-full {
+            border-color: #60a5fa;
         }
 
         .orange-title {
@@ -601,8 +588,9 @@ background: rgba(30, 58, 138, 0.4);
             margin-bottom: 0;
         }
 
+        /* Dấu tích màu vàng (#eab308) */
         .checkmark {
-            color: #f97316;
+            color: #eab308;
             font-weight: bold;
             font-size: 1.2rem;
             margin-right: 12px;
@@ -640,7 +628,7 @@ background: rgba(30, 58, 138, 0.4);
         }
 
         .form-group {
-margin-bottom: 20px;
+            margin-bottom: 20px;
         }
 
         .form-control {
@@ -741,7 +729,7 @@ margin-bottom: 20px;
             }
 
             .projects-grid {
-grid-template-columns: 1fr;
+                grid-template-columns: 1fr;
             }
 
             .branch-layout {
@@ -798,314 +786,4 @@ grid-template-columns: 1fr;
         <!-- 2. ABOUT ME SECTION -->
         <section id="about" class="about">
             <div class="container">
-                <h2 class="section-title">Về tôi</h2>
-                <div class="about-content-wrapper">
-                    <div class="about-text">
-                        <p>
-                            Xin chào! Tôi là Nguyễn Đức Lương, sinh viên ngành Khoa học Máy tính tại Đại học Công Nghệ - ĐHQGHN. Qua trải nghiệm môn học Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo, mục tiêu của tôi là áp dụng những kỹ năng số đã học để giải quyết các bài toán thực tế, tạo ra những sản phẩm tối ưu và mang lại trải nghiệm xuất sắc cho người dùng.
-                        </p>
-                    </div>
-<div class="about-badges">
-                        <div class="badge-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Đại học Công Nghệ (VNU-UET)</span>
-                        </div>
-                        <div class="badge-item">
-                            <i class="fas fa-code"></i>
-                            <span>Lập trình</span>
-                        </div>
-                        <div class="badge-item">
-                            <i class="fas fa-futbol"></i>
-                            <span>Bóng đá</span>
-                        </div>
-                        <div class="badge-item">
-                            <i class="fas fa-music"></i>
-                            <span>Âm nhạc</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. PROJECTS SECTION -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Hệ thống bài tập thành phần</h2>
-                <div class="projects-grid">
-                    
-                    <!-- Bài 1 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="anh_bai1.png" alt="Bài 1" onerror="this.src='https://placehold.co/600x400/f1f5f9/1e3a8a?text=Bai+1'">
-                            <div class="project-overlay">
-                                <a href="bai1.pdf" target="_blank" class="btn-view-evidence">Xem minh chứng</a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Bài 1: Thao tác cơ bản với tệp tin và thư mục</h3>
-                            <p class="project-desc">Mục tiêu: Thiết lập cấu trúc thư mục tối ưu và quy tắc đặt tên tệp tin khoa học. Trình bày quy trình tổ chức dữ liệu cá nhân tránh thất lạc.</p>
-                            <div class="project-tags">
-                                <span class="tag">Quản lý dữ liệu</span>
-                                <span class="tag">Windows/MacOS</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bài 2 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="anh_bai2.png" alt="Bài 2" onerror="this.src='https://placehold.co/600x400/f1f5f9/1e3a8a?text=Bai+2'">
-                            <div class="project-overlay">
-                                <a href="bai2.pdf" target="_blank" class="btn-view-evidence">Xem minh chứng</a>
-                            </div>
-</div>
-                        <div class="project-content">
-                            <h3 class="project-title">Bài 2: Tìm kiếm và đánh giá thông tin học thuật</h3>
-                            <p class="project-desc">Mục tiêu: Sử dụng các toán tử nâng cao (site:, filetype:, "") để sàng lọc thông tin và thiết lập bảng đánh giá độ uy tín của nguồn tin.</p>
-                            <div class="project-tags">
-                                <span class="tag">Advanced Search</span>
-                                <span class="tag">Nghiên cứu số</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bài 3 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="anh_bai3.png" alt="Bài 3" onerror="this.src='https://placehold.co/600x400/f1f5f9/1e3a8a?text=Bai+3'">
-                            <div class="project-overlay">
-                                <a href="bai3.pdf" target="_blank" class="btn-view-evidence">Xem minh chứng</a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Bài 3: Viết Prompt hiệu quả cho tác vụ học tập</h3>
-                            <p class="project-desc">Mục tiêu: Trình bày sự so sánh trực quan giữa Prompt ban đầu (sơ khai) và Prompt cải tiến ứng dụng các kỹ thuật cấu trúc, kèm kết quả đầu ra thực tế từ AI.</p>
-                            <div class="project-tags">
-                                <span class="tag">Kỹ nghệ Prompt</span>
-                                <span class="tag">Generative AI</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bài 4 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="anh_bai4.png" alt="Bài 4" onerror="this.src='https://placehold.co/600x400/f1f5f9/1e3a8a?text=Bai+4'">
-                            <div class="project-overlay">
-                                <a href="bai4.pdf" target="_blank" class="btn-view-evidence">Xem minh chứng</a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Bài 4: Sử dụng công cụ hợp tác trực tuyến dự án nhóm</h3>
-                            <p class="project-desc">Mục tiêu: Minh chứng về việc phối hợp làm việc qua không gian số (Trello/Notion/Google Workspace) và cách thức điều phối công việc hiệu quả trong nhóm.</p>
-                            <div class="project-tags">
-<span class="tag">Collaboration</span>
-                                <span class="tag">Project Management</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bài 5 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="anh_bai5.png" alt="Bài 5" onerror="this.src='https://placehold.co/600x400/f1f5f9/1e3a8a?text=Bai+5'">
-                            <div class="project-overlay">
-                                <a href="bai5.pdf" target="_blank" class="btn-view-evidence">Xem minh chứng</a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Bài 5: Sử dụng AI tạo sinh hỗ trợ sáng tạo nội dung</h3>
-                            <p class="project-desc">Mục tiêu: Trưng bày sản phẩm nội dung số hoàn thiện (hình ảnh, video hoặc bài viết truyền thông) được đồng sáng tạo bởi AI.</p>
-                            <div class="project-tags">
-                                <span class="tag">Content Creation</span>
-                                <span class="tag">AI Tools</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bài 6 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper">
-                            <img src="anh_bai6.png" alt="Bài 6" onerror="this.src='https://placehold.co/600x400/f1f5f9/1e3a8a?text=Bai+6'">
-                            <div class="project-overlay">
-                                <a href="bai6.pdf" target="_blank" class="btn-view-evidence">Xem minh chứng</a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Bài 6: Sử dụng AI có trách nhiệm trong học tập & nghiên cứu</h3>
-                            <p class="project-desc">Mục tiêu: Trình bày bộ nguyên tắc cá nhân dựa trên nghiên cứu học thuật nhằm đảm bảo tính liêm chính, phòng tránh hiện tượng đạo văn và ảo tưởng AI.</p>
-                            <div class="project-tags">
-                                <span class="tag">Liêm chính học thuật</span>
-                                <span class="tag">AI Ethics</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. CONCLUSIONS SECTION -->
-        <section id="conclusions" class="conclusions">
-            <div class="container">
-<h2 class="section-title">Tổng kết</h2>
-                <div class="conclusions-wrapper">
-                    
-                    <!-- Card 1 -->
-                    <div class="conclusion-card card-orange-right">
-                        <h3 class="orange-title"><i class="fas fa-lightbulb"></i> Trải nghiệm và cảm nhận cá nhân</h3>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">
-                            Kể từ những ngày đầu tiên bước vào môn Công nghệ số cho đến nay, bản thân em đã trải qua một sự thay đổi lớn về mặt tư duy công nghệ. Quá trình tự tay biên tập nội dung, tối ưu hình ảnh minh họa và sắp xếp bố cục website giúp em không chỉ ôn tập lại kiến thức một cách chủ động mà còn rèn luyện được tính tỉ mỉ, tư duy thẩm mỹ và kỹ năng giao tiếp thông tin trực quan. Việc nhìn thấy các bài tập rời rạc kết nối lại thành một sản phẩm thống nhất mang đậm dấu ấn cá nhân đem lại cho em một cảm giác tự hào và động lực lớn để tiếp tục phát triển bản thân trên không gian số.
-                        </p>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="conclusion-card card-blue-left">
-                        <h3 class="blue-title"><i class="fas fa-star"></i> Kiến thức và kỹ năng quan trọng nhất</h3>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 500;">
-                            Môn học đã trang bị cho em một bộ hành trang kỹ năng số vững chắc, chia làm hai nhóm năng lực cốt lõi:
-                        </p>
-                        <ul class="conclusion-list">
-                            <li>
-                                <span class="checkmark">✓</span>
-                                <span>Năng lực quản lý và tổ chức dữ liệu khoa học, cùng khả năng tìm kiếm, đánh giá và chọn lọc thông tin đáng tin cậy trên Internet.</span>
-                            </li>
-                            <li>
-                                <span class="checkmark">✓</span>
-                                <span>Kỹ năng làm chủ công cụ AI tạo sinh (như ChatGPT, Gemini...) thông qua phương pháp viết Prompt hiệu quả, hỗ trợ đắc lực cho công việc và học tập.</span>
-                            </li>
-                            <li>
-                                <span class="checkmark">✓</span>
-                                <span>Nhận thức sâu sắc về bảo mật thông tin, an toàn trên không gian mạng và các nguyên tắc đạo đức khi sử dụng Trí tuệ nhân tạo.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="conclusion-card card-dual-border">
-<h3 class="blue-title"><i class="fas fa-rocket"></i> Hướng phát triển trong tương lai</h3>
-                        <div class="branch-layout">
-                            <div class="branch-item">
-                                <h4>Trong học tập & Nghiên cứu</h4>
-                                <p style="color: var(--text-muted); line-height: 1.6; font-size: 1.05rem;">
-                                    Tiếp tục ứng dụng các kỹ thuật Prompt nâng cao kết hợp cùng các công cụ quản lý số để tối ưu hóa quy trình làm bài tập lớn, tổng hợp tài liệu ôn thi một cách hệ thống và tiết kiệm thời gian hơn.
-                                </p>
-                            </div>
-                            <div class="branch-item">
-                                <h4>Trong công việc & Cá nhân</h4>
-                                <p style="color: var(--text-muted); line-height: 1.6; font-size: 1.05rem;">
-                                    Hình thành và duy trì thói quen làm việc cộng tác trực tuyến. Chủ động cập nhật, học hỏi các công nghệ AI mới để gia tăng hiệu suất công việc, đồng thời xây dựng thương hiệu cá nhân trên môi trường số chuyên nghiệp.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER SECTION -->
-    <footer id="footer">
-        <div class="container">
-            <h2 class="section-title">Liên hệ với tôi</h2>
-            <div class="contact-form-container">
-                <form id="contactForm" onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Tin nhắn của bạn đã được gửi (Giả lập).'); this.reset();">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Họ và tên của bạn" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email của bạn" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" placeholder="Để lại lời nhắn cho tôi tại đây..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">
-                        Gửi lời nhắn <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
-                    </button>
-                </form>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 Nguyễn Đức Lương - Bài tập môn Nhập môn Công nghệ Số. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JAVASCRIPT CHO CÁC TÍNH NĂNG TƯƠNG TÁC -->
-    <script>
-        // 1. Hiệu ứng Header khi cuộn trang
-const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // 2. Chức năng Menu trên Mobile (Hamburger)
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Tự động đóng menu mobile khi click vào một link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            });
-        });
-
-        // 3. Chức năng Chuyển đổi Dark/Light Mode
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
-        const htmlElement = document.documentElement;
-
-        // Kiểm tra xem người dùng đã lưu thiết lập trước đó chưa (trong localStorage)
-        const currentSavedTheme = localStorage.getItem('theme');
-        if (currentSavedTheme) {
-            htmlElement.setAttribute('data-theme', currentSavedTheme);
-            updateIcon(currentSavedTheme);
-        }
-
-        // Xử lý sự kiện click nút Toggle
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            let newTheme = 'light';
-            
-            if (currentTheme !== 'dark') {
-                newTheme = 'dark';
-            }
-            
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme); // Lưu cấu hình
-            updateIcon(newTheme);
-        });
-
-        // Hàm cập nhật Icon Mặt trăng/Mặt trời
-        function updateIcon(theme) {
-            if (theme === 'dark') {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        }
-    </script>
-</body>
-</html>
+                <h2 class="section
